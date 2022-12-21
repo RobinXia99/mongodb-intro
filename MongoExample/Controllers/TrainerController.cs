@@ -37,7 +37,7 @@ public class TrainerController : Controller
     public async Task<ActionResult<Trainer>> GetById([FromRoute] string id)
     {
         var trainer = await _trainerService.getTrainer(id);
-        
+
         // if trainer is null then we return NotFound() which is a part of the AspNetCore.Mvc package. It produces a status code of 404. 
         if (trainer is null)
         {
