@@ -7,6 +7,9 @@ namespace MongoExample.Models;
 public class Trainer
 {
 
+    /// <summary>
+    /// The ID of the trainer
+    /// </summary>
     // The [BsonId] attribute is used to annotate a property in a class that represents the _id in a collection.
     // It specifies that the property should be mapped to the _id field when the class is serialized to or deserialized from a BSON document.
     // For example one of the trainers is mapped as _id: ObjectId('63a291e1c255c7bdcd02e826') in mongodb atlas.
@@ -19,10 +22,20 @@ public class Trainer
     // automatically generated. Name, region and pokemons cannot be null.
     public string? Id { get; set; }
 
+    /// <summary>
+    /// Name of the trainer
+    /// </summary>
     public string name { get; set; } = null!;
 
+    /// <summary>
+    /// The region where the trainer resides in
+    /// </summary>
     public string region { get; set; } = null!;
 
+
+    /// <summary>
+    /// List of the trainers pokemons
+    /// </summary>
     // Here we specify that "pokemons" should be the name of the BsonElement when it is converted to and from a bson document.
     // JsonPropertyName specifies the name of the property when in a Json format. The array is thus named pokemons.
     [BsonElement("pokemons")]

@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MongoExample</name>
+    </assembly>
+    <members>
+        <member name="M:MongoExample.Controllers.PokemonController.Delete(System.String)">
+            <summary>
+            Deletes a specific pokemon
+            </summary>
+        </member>
+        <member name="M:MongoExample.Controllers.TrainerController.GetById(System.String)">
+             <remarks>
+             Sample request:
+            
+                 GET /Todo
+                 {
+                    "id": 1,
+                    "name": "Item #1",
+                    "isComplete": true
+                 }
+            
+             </remarks>
+        </member>
+        <member name="M:MongoExample.Controllers.TrainerController.Post(MongoExample.Models.Trainer)">
+             <remarks>
+             Sample request:
+            
+                 POST /Todo
+            {
+              "name": "Trainer",
+              "region": "Kanto",
+              "pokemons": []
+            }
+            
+             </remarks>
+        </member>
+        <member name="M:MongoExample.Controllers.TrainerController.Delete(System.String)">
+            <summary>
+            Deletes a specific
+            </summary>
+        </member>
+        <member name="P:MongoExample.Models.Pokemon.Id">
+            <summary>
+            The pokemons ID (not pokedex ID)
+            </summary>
+        </member>
+        <member name="P:MongoExample.Models.Pokemon.name">
+            <summary>
+            Name of the pokemon
+            </summary>
+        </member>
+        <member name="P:MongoExample.Models.Pokemon.types">
+            <summary>
+            Types of the pokemon
+            </summary>
+        </member>
+        <member name="P:MongoExample.Models.Pokemon.moves">
+            <summary>
+            List of moves known by the pokemon
+            </summary>
+        </member>
+        <member name="P:MongoExample.Models.Trainer.Id">
+            <summary>
+            The ID of the trainer
+            </summary>
+        </member>
+        <member name="P:MongoExample.Models.Trainer.name">
+            <summary>
+            Name of the trainer
+            </summary>
+        </member>
+        <member name="P:MongoExample.Models.Trainer.region">
+            <summary>
+            The region where the trainer resides in
+            </summary>
+        </member>
+        <member name="P:MongoExample.Models.Trainer.pokemons">
+            <summary>
+            List of the trainers pokemons
+            </summary>
+        </member>
+    </members>
+</doc>

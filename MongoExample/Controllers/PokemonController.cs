@@ -8,6 +8,7 @@ namespace MongoExample.Controllers;
 
 [Controller]
 [Route("api/[controller]")]
+[Produces("application/json")]
 public class PokemonController : Controller
 {
 
@@ -55,6 +56,9 @@ public class PokemonController : Controller
         return NoContent();
     }
 
+/// <summary>
+    /// Deletes a specific pokemon
+    /// </summary>
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(string id)
     {

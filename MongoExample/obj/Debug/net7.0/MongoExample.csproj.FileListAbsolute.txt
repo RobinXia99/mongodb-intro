@@ -43,3 +43,5 @@
 /Users/robin/Desktop/c#/mongodb-intro/MongoExample/obj/Debug/net7.0/MongoExample.genruntimeconfig.cache
 /Users/robin/Desktop/c#/mongodb-intro/MongoExample/obj/Debug/net7.0/ref/MongoExample.dll
 /Users/robin/Desktop/c#/mongodb-intro/MongoExample/bin/Debug/net7.0/Swashbuckle.AspNetCore.Annotations.dll
+/Users/robin/Desktop/c#/mongodb-intro/MongoExample/bin/Debug/net7.0/MongoExample.xml
+/Users/robin/Desktop/c#/mongodb-intro/MongoExample/obj/Debug/net7.0/MongoExample.xml

@@ -12,6 +12,7 @@ namespace MongoExample.Controllers;
 
 [Controller]
 [Route("api/[controller]")]
+[Produces("application/json")]
 public class TrainerController : Controller
 {
 
@@ -23,6 +24,7 @@ public class TrainerController : Controller
     }
 
     // Here we perform a HttpGet request, a Get request only returns values, it cannot have a body.
+
     [HttpGet]
     [SwaggerOperation(Summary = "Retrieves all trainers", Description = "Returns an array of trainers")]
     // Task<List<Trainer>> means the expected return type is the result of this task. TResult contains a list of trainers.
@@ -31,6 +33,17 @@ public class TrainerController : Controller
         return await _trainerService.getTrainers();
     }
 
+        /// <remarks>
+/// Sample request:
+///
+///     GET /Todo
+///     {
+///        "id": 1,
+///        "name": "Item #1",
+///        "isComplete": true
+///     }
+///
+/// </remarks>
     [HttpGet("{id}")]
     [SwaggerOperation(Summary = "Retrieves trainer by id", Description = "Returns a single trainer")]
     // In this function we take in an id [FromRoute] which means id will contain the url path.
@@ -48,6 +61,17 @@ public class TrainerController : Controller
         return trainer;
     }
 
+    /// <remarks>
+/// Sample request:
+///
+///     POST /Todo
+///{
+///  "name": "Trainer",
+///  "region": "Kanto",
+///  "pokemons": []
+///}
+///
+/// </remarks>
     [HttpPost]
     // [FromBody] means trainer will contain the data provided in the body.
     public async Task<IActionResult> Post([FromBody] Trainer trainer)
@@ -67,6 +91,9 @@ public class TrainerController : Controller
         return NoContent();
     }
 
+    /// <summary>
+    /// Deletes a specific
+    /// </summary>
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(string id)
     {
